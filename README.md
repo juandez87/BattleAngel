@@ -56,12 +56,15 @@ Number in this maze means poison with different lethality.
 Using ``a``, ``s``, ``d``, ``w`` to control the battle angel.
 
 ![](/Users/corina/Desktop/EE_590/MyRepo/FinalProject/BattleAngel/img/UI1.png)
-
+![alt text](https://github.com/yuew03/BattleAngel/blob/master/img/UI1.png)
 #### **Game Process**
 After reaching the charger,  the value of current life can be added by ten. Battle angel will have enough life value to the end point.
 ![](/Users/corina/Desktop/EE_590/MyRepo/FinalProject/BattleAngel/img/UI2.png)
 ![](/Users/corina/Desktop/EE_590/MyRepo/FinalProject/BattleAngel/img/UI3.png)
 ![](/Users/corina/Desktop/EE_590/MyRepo/FinalProject/BattleAngel/img/UI4.png)
+![alt text](https://github.com/yuew03/BattleAngel/blob/master/img/UI2.png)
+![alt text](https://github.com/yuew03/BattleAngel/blob/master/img/UI3.png)
+![alt text](https://github.com/yuew03/BattleAngel/blob/master/img/UI4.png)
 
 
 
