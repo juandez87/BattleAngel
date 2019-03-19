@@ -6,7 +6,7 @@ CC          := g++ -std=c++14 -Wno-psabi
 DGEN        := doxygen
 
 #The Target Binary Program
-TARGET      := stopwatch
+TARGET      := main
 
 #The Directories, Source, Includes, Objects, Binary and Resources
 SRCDIR      := ./src
@@ -63,9 +63,9 @@ spotless: clean
 	@$(RM) -rf build bin html latex
 
 #Unit Tester
-bin/test: $(NON_MAIN_OBJECTS) $(HEADERS) ./src/unit_test.cc ./src/test_main.cpp
-	$(CC) $(CFLAGS) $(INC) -c -o test_main.o ./src/test_main.cpp
-	$(CC) $(CFLAGS) -o bin/test test_main.o $(NON_MAIN_OBJECTS) $(LIB)
+bin/test: $(NON_MAIN_OBJECTS) $(HEADERS) ./src/unit_test.cc ./src/test_main.cpp ./include/main.cc
+	$(CC) $(CFLAGS) $(INC) -c -o test_main.o ./src/test_main.cpp main.o
+	$(CC) $(CFLAGS) -o bin/test test_main.o main.o $(NON_MAIN_OBJECTS) $(LIB)
 
 #Link
 $(TARGETDIR)/$(TARGET): $(OBJECTS) $(HEADERS)

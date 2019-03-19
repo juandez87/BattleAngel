@@ -9,7 +9,7 @@ using namespace std;
 
 MazeGen::MazeGen(){
 	cout<<"Maze will be generated based on the default size.\n";
-	_maze_size = 10;
+	_maze_size = 12;
 	srand(time(0)); 
 	_chargeP = rand() % 100;
 	while (_chargeP == 0 || _chargeP == 99){
@@ -30,7 +30,7 @@ MazeGen::MazeGen(int size, int chargeP){
 	}
 	srand(time(0)); 
 	if (chargeP == 0 || chargeP >= (size * size)){
-		cout<<"Can not set the position for charger. Charger will be put randomly";
+		cout<<"Can not set the position for charger. Charger will be put randomly\n";
 		_chargeP = rand() % (size * size);
 		while (_chargeP == 0 || _chargeP == (size * size - 1)){
 			_chargeP = rand() % (size * size);
@@ -76,7 +76,8 @@ void MazeGen::updateRobotP(std::string op){
 
 	if(op == "r"){
 		_robot_p = 0;
-		_visitC = false;
+		_visitC = false;	
+		_opValid = true;
 	}
 	checkC(_robot_p);
 }

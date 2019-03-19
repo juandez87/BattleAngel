@@ -22,6 +22,7 @@ int main(){
 		maze.printMaze();
 		cout<<"Current life value:"<<lifeVal<<endl;
 		cout<<"Press 'a,s,d,w' to control your robot:"<<endl;
+		cout<<"Press 'r' to reset your robot:"<<endl;
 		getline (cin, control);
 		maze.updateRobotP(control);
 		
